@@ -99,3 +99,14 @@ Espressioni regolari -> automi a stati finiti. Identificare i token in input e p
      ./counter < README
 
      numeri: [0-9]+
+
+     contare i numeri
+
+     digit [0-9]
+     %%
+     {digit}+ ECHO;
+
+     .
+     %%
+
+     ESERCIZIO: leggendo numeri in input sommate il loro valore e alla fine dell'esecuzione stampo valore dei numeri sommati
