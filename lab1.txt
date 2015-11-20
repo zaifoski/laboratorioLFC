@@ -1,0 +1,101 @@
+-------------------------------
+-------------------------------
+20/11/2015
+LFC lab1
+-------------------------------
+-------------------------------
+ESERCITATORE: Lorenzo Gramola
+LINKS:        https://sites.google.com/site/compilerclassunitn/home
+              https://github.com/LorenzoGramola/LFC2015-2016
+ESAME:        Provare sui pc della scuola!
+ORARI:        mercoledì iniziamo alle 16, con pausa.
+              giovedì e venerdì: 9-10.30
+
+-------------------------------
+DEF:
+- linguaggio = insieme di parole che segue regole condivise
+- l. di programmazione = l. che ci permette di comunicare con i computer
+- grammatica = ci permette di definire quali sono le parole del linguaggio
+- sintassi = organizzare parole grammatica dando una struttura
+- semantica = significato delle parole in un determinato ordine
+^
+|
+Con queste cose possiamo scrivere un file di testo che è il codice sorgente dei nostri programmi
+lo diamo in pasto ad una catena che restituisce
+  - un eseguibile
+  - o direttamente un output
+
+Codice sorgente -------------------------------------> codice eseguibile
+    3 fasi:      analisi   - intermedia - sintesi
+   compilatore:  front-end -            - back-end
+
+front-end -> lessicale, sintattica e semantica
+          -> token riorganizzati in albero sintattico, su cui vengono eseguiti controlli,
+             semantici o meno
+codice intermedio -> ottimizzazione
+back-end -> trasforma codice in eseguibile con ottimizzazioni specifiche della macchina
+         -> es. gcc, collezione di compilatori che decide cosa fare in base alla
+           macchina su cui siamo
+
+-------------------------------
+ANALISI
+-------------------------------
+- Con i 2 tool nominati prima (...............)
+- Lexer ->  prende in input il file sorgente e uno ala volta dà in output i token
+            che corrispondono alle stringhe generabili dalla nostra grammatica
+  Parser -> organizza i token secondo sintassi grammatica
+  Generatore di codice intermedio -> effettua i controlli intermedi e crea input
+            per generatore di codice, che genera codice compatibile col linguaggio da noi scelto
+- Unica che può arrivare a comunicare con l'utente:
+  es. variabile non inizializzata => messaggio di errore
+
+Es: Calcolatrice
+    input del lexer: 89 + 7
+    ----------------------------
+    grammatica: E -> E + E | E * E | id  | num
+    token: num + num
+    output del lexer: stringa spezzata nei vari token (analisi lessicale)
+
+Es: public statis void main(String [] args){
+      System.out.println("LFC lexer example");
+    }
+
+    Bisogna dire come riconoscere i token:
+Lo strumento che lo fa (che usiamo noi) è Lex.
+Oggi sostituito da Flex (lex --version) che è più performante.
+Espressioni regolari -> automi a stati finiti. Identificare i token in input e parsarli correttamente.
+
+(11) Declarations
+     %%
+     Patterns
+     %%
+     Function
+
+     ci toccherà scrivere a mano la struttura dei file
+
+     linux -> stessa versione uni
+
+(14) Patterns: match di stringhe in input con dei pattern,
+               riconosciuti tramite espressioni regolari
+
+(15) vedi wordcount.l
+
+     lex.yy.c
+     col gcc: file eseguibile
+
+     letter [^ \t\n] #vuol dire che letter è qualsiasi cosa che non è spazio, tab o a capo
+     main() #invoca funzione che chiama parser, e esegue quel pezzo di codice sullo stream in input
+
+     (Posso cambiare i nomi col -o)
+     per compilare:     lex wordcount.l
+     genera:            lex.yy.c
+     cc -c lex.yy.c
+     genera:            lex.yy.o
+     linkiamo librerie: cc -o counter lex.yy.o -ll
+     adesso ho il mio eseguibile counter
+
+     errori non subito rilevati: c, inversione percento parentesi ecc
+
+     ./counter < README
+
+     numeri: [0-9]+
