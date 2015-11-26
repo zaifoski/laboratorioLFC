@@ -1,0 +1,11 @@
+%%
+^a {printf("first");}
+^b {printf("second");}
+^c {printf("third");}
+.
+\n
+%%
+int main(){
+  yylex();
+  return 0;
+}
