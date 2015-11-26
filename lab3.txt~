@@ -1,0 +1,34 @@
+---------------------------
+---------------------------
+lab3, 26/11/2015	
+---------------------------
+---------------------------
+
+---------------------------
+ottimizzatore:
+---------------------------
+ - efficiente in tempo e spazio
+ - compatto
+
+ES:
+    var x,y;
+    function add(m,n){
+      return m+n
+    }
+
+    il compilatore è in difficoltà ad ottimizzarlo, a meno che non scrivo
+    x=1;
+    y=2;
+---------------------------
+tabella dei simboli:
+---------------------------
+ - Quando leggiamo file sorgentie ci salviamo es:
+   nomi variabili, nomi funzioni, label dove abbiamo mandato i goto ecc
+---------------------------
+usage of lex:
+---------------------------
+ - eseguire specifiche azioni quando troviamo determinati input
+   in particolare possiamo omettere (\n) o manipolare (a->d) input
+ - lex 		yacc
+   yylex	yyparse
+
