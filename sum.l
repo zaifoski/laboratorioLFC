@@ -1,17 +1,13 @@
 %{
-int c = 0;	
-int c2 = 0;
+int c = 0;
 %}
-
 %%
-
-[0-9]+,[0-9]+ {c++;}
-[0-9]+ {c2++;}
+[0-9]+ {c +=atoi(yytext);}
 .
 \n
 %%
 
 int main(){
 	yylex();
-	printf("There were %d real numbers and &d ints", c, c2);
+	printf("somma vale %d\n", c);
 }

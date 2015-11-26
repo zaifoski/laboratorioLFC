@@ -1,0 +1,14 @@
+
+%%
+[a-z] {
+char c = yytext[0];
+c+=3;
+printf("%c - %d\n", (char)c, (int)c);}
+.
+\n
+%%
+
+int main(){
+yylex();
+printf("\n");
+}

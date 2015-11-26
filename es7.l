@@ -1,0 +1,21 @@
+
+%%
+[a-z] {
+char c = yytext[0];
+c=(c+3);
+if(c>'z') c-=26;
+printf("%c - %d\n", (char)c, (int)c);}
+[A-Z] {
+char c = yytext[0];
+c=(c+3);
+if(c>'Z') c-=26;
+printf("%c - %d\n", (char)c, (int)c);}
+.
+\n
+%%
+
+int main(){
+yylex();
+printf("\n");
+}
+
