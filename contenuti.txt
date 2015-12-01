@@ -1,3 +1,8 @@
+lex miofile.l
+gcc -c lex.yy.c
+gcc -o newname lex.yy.o -ll
+./newname < eventualeInput > eventualeOutput
+
 lab1/wordcount.l -> conta i caratteri e le parole in un testo
 
 lab2/countIntReal.l -> conta interi e reali
