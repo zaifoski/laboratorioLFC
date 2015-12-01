@@ -1,9 +1,9 @@
 # laboratorioLFC
 
-# lex miofile.l
-# gcc -c lex.yy.c
-# gcc -o newname lex.yy.o -ll
-# ./newname < eventualeInput > eventualeOutput
+lex miofile.l
+gcc -c lex.yy.c
+gcc -o newname lex.yy.o -ll
+./newname < eventualeInput > eventualeOutput
 
 ESERCITATORE: Lorenzo Gramola
 LINKS:        https://sites.google.com/site/compilerclassunitn/home

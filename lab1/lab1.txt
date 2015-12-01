@@ -94,23 +94,4 @@ Espressioni regolari -> automi a stati finiti. Identificare i token in input e p
      linkiamo librerie: cc -o counter lex.yy.o -ll
      adesso ho il mio eseguibile counter
 
-     errori non subito rilevati: c, inversione percento parentesi ecc
-
-     ./counter < README
-
-     numeri: [0-9]+
-
-     contare i numeri
-
-     digit [0-9]
-     %%
-     {digit}+ ECHO;
-
-     .
-     %%
-
-     ESERCIZIO: leggendo numeri in input sommate il loro valore e alla fine dell'esecuzione stampo valore dei numeri sommati
-
-1. SOURCE
-2. compile -> exec
-3. ./exec < ...
+     errori non subito rilevati: errori di c, inversione percento parentesi ecc
