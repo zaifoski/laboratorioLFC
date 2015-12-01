@@ -1,0 +1,15 @@
+%{
+%}
+%%
+[0-9]+ {
+int num = atoi(yytext);
+if ( (num%7)==0) printf("%d", num+3);
+else printf("%d",num);
+}
+.
+\n
+%%
+int main(){
+  yylex();
+  return 0;
+}

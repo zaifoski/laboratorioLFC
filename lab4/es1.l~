@@ -1,0 +1,13 @@
+%START AA BB CC
+%%
+^a {ECHO; BEGIN AA;}
+
+<AA>directory {printf("first");}
+
+\n {ECHO; BEGIN 0;}
+ 
+%%
+int main(){
+  yylex();
+  return 0;
+}
