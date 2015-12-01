@@ -1,0 +1,20 @@
+lab4/es1 -> use starting conditions
+lab4/es2 -> Ambiguous matching: reject
+lab4/es3 -> Build a source file for lex such that upon reading a number is going
+	    to output the same number + 3 if the number can be divided by 7, else 
+	    leave the output unchanged.
+lab4/es4 -> Think and write down a reg exp to match the quoted strings like
+	    they can appear in Java
+            eg. "hello word"
+            "this is a string with quoted \"string\" inside"
+----------------------
+use starting conditions
+----------------------
+- In definition section: 				%start cond1 cond2 cond3    (any order)
+- Condition may be referenced at head of a rule: 	<condX> expr
+- Enter a condition with BEGIN cond, resume lex state with BEGIN 0
+----------------------
+Handling ambiguous spec
+----------------------
+- Longest match wins
+- Among rules with the same number of chars…specification order is used
