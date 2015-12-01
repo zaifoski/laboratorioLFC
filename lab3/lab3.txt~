@@ -29,27 +29,6 @@ usage of lex:
 ---------------------------
  - eseguire specifiche azioni quando troviamo determinati input
    in particolare possiamo omettere (\n) o manipolare (a->d) input
- - lex 			yacc
-   yylex	->	yyparse
----------------------------
-espressioni regolari:
----------------------------
-[^,\n] = tutto ciò che non è virgola né a capo
-. = qualsiasi cosa che non sia new line
-+ = ripetuto uno o più volta
-| = or
-? = 0 o 1 volta
-^ = negazione
-myindex"++" matcherà myindex++
-a+ = aa*
-[a-zA-Z]+ = almeno un carattere che vada da 'a' a 'z' o da 'A' a Z'
-[a-zA-Z][a-zA-Z0-9]* = variabile di un lunguaggio
-
-PER CASA es1v2 con [^.\n] ma che funzioni
-
-targa auto Italia: [A-Z][A-Z][0-9][0-9][0-9][A-Z][A-Z]
-noi non useremo:   [A-Z]\{2,2}[0-9]\{3,3}[A-Z]\{2,2}
-
-^ inizio riga
-$ fine riga
+ - lex 		yacc
+   yylex	yyparse
 

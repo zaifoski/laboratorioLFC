@@ -1,3 +1,0 @@
-1. SOURCE
-2. compile -> exec
-3. ./exec < ...

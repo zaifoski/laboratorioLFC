@@ -110,3 +110,7 @@ Espressioni regolari -> automi a stati finiti. Identificare i token in input e p
      %%
 
      ESERCIZIO: leggendo numeri in input sommate il loro valore e alla fine dell'esecuzione stampo valore dei numeri sommati
+
+1. SOURCE
+2. compile -> exec
+3. ./exec < ...

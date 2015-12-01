@@ -1,0 +1,11 @@
+----------------------
+use starting conditions
+----------------------
+- In definition section: 				%start cond1 cond2 cond3    (any order)
+- Condition may be referenced at head of a rule: 	<condX> expr
+- Enter a condition with BEGIN cond, resume lex state with BEGIN 0
+----------------------
+Handling ambiguous spec
+----------------------
+- Longest match wins
+- Among rules with the same number of chars…specification order is used

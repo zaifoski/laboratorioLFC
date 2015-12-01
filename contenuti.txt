@@ -1,3 +1,16 @@
+lab1/wordcount.l -> conta i caratteri e le parole in un testo
+
+lab2/countIntReal.l -> conta interi e reali
+lab2/sum.l -> somma interi
+lab2/sumIntReal.l -> somma interi e reali
+lab2/es5.l -> stampa ogni char in input e il suo intero corrispondente
+lab2/es6.l -> stampa ogni char in input e il suo intero corrispondente +3
+lab2/es7.l -> 6 con: dopo z torna ad a e dopo Z torna ad A
+lab2/es8.l -> somma i numeri romani (solo i,v,x,l,c,d,m)
+
+lab3/es1 -> crea tabella in html a partire da csv
+lab3/es2 -> uso di carattere per inizio riga ^
+
 lab4/es1 -> use starting conditions
 lab4/es2 -> Ambiguous matching: reject
 lab4/es3 -> Build a source file for lex such that upon reading a number is going
@@ -7,14 +20,3 @@ lab4/es4 -> Think and write down a reg exp to match the quoted strings like
 	    they can appear in Java
             eg. "hello word"
             "this is a string with quoted \"string\" inside"
-----------------------
-use starting conditions
-----------------------
-- In definition section: 				%start cond1 cond2 cond3    (any order)
-- Condition may be referenced at head of a rule: 	<condX> expr
-- Enter a condition with BEGIN cond, resume lex state with BEGIN 0
-----------------------
-Handling ambiguous spec
-----------------------
-- Longest match wins
-- Among rules with the same number of chars…specification order is used
