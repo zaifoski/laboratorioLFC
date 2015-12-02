@@ -7,3 +7,9 @@
 \-[0-9]+ #prende anche i numeri negativi
 es2.l 	\\.
 		per matchare \n e \t
+
+es: 8 digits ma non più di due slash
+    12345678 Sì
+    12-34-5678 Sì
+    1234-5678 Sì
+    12-45-78-91 NO
