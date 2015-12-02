@@ -50,9 +50,8 @@ lab4/es1 -> use starting conditions
 
 lab4/es2 -> Ambiguous matching: reject
 
-lab4/es3 -> Build a source file for lex such that upon reading a number is going
-	    to output the same number + 3 if the number can be divided by 7, else 
-	    leave the output unchanged.
+lab4/es3 -> Build a source file for lex such that upon reading a number is going to output the same number + 3 if the number can be divided by 7, else leave the output unchanged.
+
 lab4/es4 -> Think and write down a reg exp to match the quoted strings like
 	    they can appear in Java
             eg. "hello word"
