@@ -1,0 +1,6 @@
+"this is a quoted string"
+"this string contains a \"quoted string\""
+bla bla "bla"
+"\asdf"
+"\n"
+"\"a\""
