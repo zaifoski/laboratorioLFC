@@ -1,0 +1,28 @@
+-------------------------
+-------------------------
+3/12/2015, lab 6 lfc, yacc intro
+-------------------------
+-------------------------
+- yacc -> Nowadays substituted by a more powerful tool called bison 
+- 2nd of 3 phase of front-end: 	takes tokens from lexer output
+								outputs syntax tree for intermediate code generator
+-------------------------
+structure of yacc source file 
+-------------------------
+Declarations
+%%
+rules: grammar + actions
+%%
+programs/user routine
+
+- As well as lex we can have empty sections but not the rules one
+%% 			declaration is empty
+rules 		program is empty 
+-------------------------
+- Yacc is enough friendly
+- It tell us if the grammar is ambiguous
+- Tells us if we have unused production
+- Helps us in spotting grammar conflicts..
+- We will see some complex examples in which it will prompt
+very useful messages, concerning the usage of the rules and
+the actions.
